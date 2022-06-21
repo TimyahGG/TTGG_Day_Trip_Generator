@@ -7,18 +7,71 @@
 #each function should do just one thing
 
 Destinations_List = ["Jacksonville", "New Bern", "Raleigh", "Surf City"]
-Restaurants_List = ["El Cerro Grande", "Bay Leaf", "Farmer's Market", "Buddy's Crab House" ]
+Restaurants_List = ["El Cerro Grande", "Bay Leaf", "The Farmer's Market", "Buddy's Crab House" ]
 Transportation_List = ["Rental Vehical", "Uber", "Train"]
 Entertainment_List = ["Cracked It! Escape Games venue", "Birthplace of Pepsi", "Museum of Art", "Bumblebee Market"]
 
 import random
-print(f'For your destination selection, how does visiting {random.choice(Destinations_List)} sound?')
 
-import random
-print(f'For your restaurant selection, how does having dinner at {random.choice(Restaurants_List)} sound?')
+Destination_approval = False
+Random_Destination = (random.choice(Destinations_List))
+Destination_choice = input(f'Does visiting {Random_Destination} sound good? Y/N ')
 
-import random
-print(f'For your transportation selection, how does riding in a {random.choice(Transportation_List)} sound?')
 
-import random
-print(f'For your entertainment selection, how does going to the {random.choice(Entertainment_List)} sound?')
+while Destination_approval == False:
+    if Destination_choice == "Y":
+        Destination_approval = True
+        print("Great! Let's move on to your dinner selection.")
+    elif Destination_choice == "N":
+        Destinations_List.remove(Random_Destination)
+        Random_Destination = (random.choice(Destinations_List))
+        Destination_choice = input(f'Okay, does visiting {Random_Destination} sound better? Y/N ')
+    else:
+        Destination_choice = input(f'Sorry, that was an incorrect response. Does visiting {Random_Destination} sound okay? Y/N ')
+
+Restaurant_approval = False
+Random_Restaurant = (random.choice(Restaurants_List))
+Restaurant_choice = input(f'Does having dinner at {Random_Restaurant} sound good? Y/N ')
+
+while Restaurant_approval == False:
+    if Restaurant_choice == "Y":
+        Restaurant_approval = True
+        print("Great! Let's move on to your transportation selection.")
+    elif Restaurant_choice == "N":
+        Restaurants_List.remove(Random_Restaurant)
+        Random_Restaurant = (random.choice(Restaurants_List))
+        Restaurant_choice = input(f'Okay, does having dinner at {Random_Restaurant} sound better? Y/N ')
+    else:
+        Restaurant_choice = input(f'Sorry, that was an incorrect response. Does having dinner at {Random_Restaurant} sound okay? Y/N ')
+    
+Transportation_approval = False
+Random_Transportation = (random.choice(Transportation_List))
+Transportation_choice = input(f'Does traveling via {Random_Transportation} sound good? Y/N ')
+
+while Transportation_approval == False:
+    if Transportation_choice == "Y":
+        Transportation_approval = True
+        print("Great! Let's move on to your entertainment selection.")
+    elif Transportation_choice == "N":
+        Transportation_List.remove(Random_Transportation)
+        Random_Transportation = (random.choice(Transportation_List))
+        Transportation_choice = input(f'Okay, does traveling via {Random_Transportation} sound better? Y/N ')
+    else:
+        Transportation_choice = input(f'Sorry, that was an incorrect response. Does traveling via {Random_Transportation} sound okay? Y/N ')
+
+Entertainment_approval = False
+Random_Entertainment = (random.choice(Entertainment_List))
+Entertainment_choice = input(f'Does spending the afternoon at the {Random_Entertainment} sound good? Y/N ')
+
+while Entertainment_approval == False:
+    if Entertainment_choice == "Y":
+        Entertainment_approval = True
+        print("Great! Let's recap ypur trip selections.")
+    elif Entertainment_choice == "N":
+        Entertainment_List.remove(Random_Entertainment)
+        Random_Entertainment = (random.choice(Entertainment_List))
+        Entertainment_choice = input(f'Okay, does spending your afternoon at {Random_Entertainment} sound better? Y/N ')
+    else:
+        Entertainment_choice = input(f'Sorry, that was an incorrect response. Does spending your afternoon at {Random_Entertainment} sound okay? Y/N ')
+
+print(f"You've decided to take a trip to {Random_Destination}! While on vacation, you'll be travelling via {Random_Transportation}, spending the afternoon at {Random_Entertainment} and having dinner at {Random_Restaurant}. Thank you for using our trip generator!")
