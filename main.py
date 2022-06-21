@@ -6,3 +6,7 @@
 #display my completed trip in the console.
 #each function should do just one thing
 
+Destinations_List = ["Jacksonville", "New Bern", "Raleigh", "Surf City"]
+Restaurants_List = ["El Cerro Grande", "Bay Leaf", "Farmer's Market", "Buddy's Crab House" ]
+Transportation_List = ["Rental Vehical", "Uber", "Train"]
+Entertainment_List = ["Cracked It! Escape Games", "Birthplace of Pepsi", "Museum of Art", "Bumblebee Market"]
