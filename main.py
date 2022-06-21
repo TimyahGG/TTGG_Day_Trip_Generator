@@ -17,7 +17,6 @@ Destination_approval = False
 Random_Destination = (random.choice(Destinations_List))
 Destination_choice = input(f'Does visiting {Random_Destination} sound good? Y/N ')
 
-
 while Destination_approval == False:
     if Destination_choice == "Y":
         Destination_approval = True
@@ -74,4 +73,15 @@ while Entertainment_approval == False:
     else:
         Entertainment_choice = input(f'Sorry, that was an incorrect response. Does spending your afternoon at {Random_Entertainment} sound okay? Y/N ')
 
-print(f"You've decided to take a trip to {Random_Destination}! While on vacation, you'll be travelling via {Random_Transportation}, spending the afternoon at {Random_Entertainment} and having dinner at {Random_Restaurant}. Thank you for using our trip generator!")
+Finalized_plan = False
+Plan_approval = input(f"You've decided to take a trip to {Random_Destination}! While on vacation, you'll be travelling via {Random_Transportation}, spending the afternoon at {Random_Entertainment} and having dinner at {Random_Restaurant}. Is this plan the one you've decided on? Y/N ")
+
+while Finalized_plan == False:
+    if Plan_approval == "Y":
+        Finalized_plan = True
+        print("Great! Thank you for using our trip generator!")
+    elif Plan_approval == "N":
+        print("Sorry about that. Let's start from the beginning.")
+        break
+    else:
+        Plan_approval = input("Sorry, that was an incorrect response. You've decided to take a trip to {Random_Destination}! While on vacation, you'll be travelling via {Random_Transportation}, spending the afternoon at {Random_Entertainment} and having dinner at {Random_Restaurant}. Is this plan the one you've decided on? Y/N ")
