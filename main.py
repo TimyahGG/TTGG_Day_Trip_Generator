@@ -9,4 +9,16 @@
 Destinations_List = ["Jacksonville", "New Bern", "Raleigh", "Surf City"]
 Restaurants_List = ["El Cerro Grande", "Bay Leaf", "Farmer's Market", "Buddy's Crab House" ]
 Transportation_List = ["Rental Vehical", "Uber", "Train"]
-Entertainment_List = ["Cracked It! Escape Games", "Birthplace of Pepsi", "Museum of Art", "Bumblebee Market"]
+Entertainment_List = ["Cracked It! Escape Games venue", "Birthplace of Pepsi", "Museum of Art", "Bumblebee Market"]
+
+import random
+print(f'For your destination selection, how does visiting {random.choice(Destinations_List)} sound?')
+
+import random
+print(f'For your restaurant selection, how does having dinner at {random.choice(Restaurants_List)} sound?')
+
+import random
+print(f'For your transportation selection, how does riding in a {random.choice(Transportation_List)} sound?')
+
+import random
+print(f'For your entertainment selection, how does going to the {random.choice(Entertainment_List)} sound?')
