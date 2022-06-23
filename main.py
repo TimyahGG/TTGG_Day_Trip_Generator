@@ -104,4 +104,5 @@ def generate_trip():
     
     confirm_trip(confirmed_destination, confirmed_restaurant, confirmed_transportation, confirmed_entertainment)
 
+print("Welcome to the trip generator! Please answer using 'Y' or 'N' in UPPERCASE only. Let's Begin!")
 generate_trip()
